@@ -5,17 +5,22 @@ public class Main {
         numbers.insert(20);
         numbers.insert(30);
         numbers.insert(40);
-        numbers.insert(50);
-        numbers.insert(60);
-        numbers.insert(70);
-        numbers.insert(80);
-        numbers.removeAt(5);
+        //numbers.removeAt(3);
 
         numbers.print();
 
         System.out.println(numbers.indexOf(90));
 
         System.out.println("Max " + numbers.max());
+
+        int[] compare = {20, 30, 50, 1000, 70, 90};
+        //System.out.println(numbers.intersect(compare));
+
+        numbers.reverse();
+        numbers.print();
+
+        numbers.insertAt(90, 1);
+        numbers.print();
 
     }
 }

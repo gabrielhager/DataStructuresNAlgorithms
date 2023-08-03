@@ -78,4 +78,56 @@ public class Myrray {
 
         return max;
     }
+    //O(n^2)
+    public int[] intersect(int[] array)
+    {
+        int size = 0;
+        int index = 0;
+
+        for(int i = 0; i < initArray.length; i++)
+        {
+            for(int j = 0; j < array.length; j++)
+            {
+                if(initArray[i] == array[j])
+                    size++;
+            }
+        }
+
+        int[] commonArray = new int[size];
+
+        for(int i = 0; i < initArray.length; i++)
+        {
+            for(int j = 0; j < array.length; j++)
+            {
+                if(initArray[i] == array[j])
+                    commonArray[index++] = array[j];
+            }
+        }
+
+        return commonArray;
+    }
+
+    public void reverse()
+    {
+        int[] temp = new int[index];
+
+        for(int i = 0; i < index; i++)
+        {
+            temp[i] = initArray[index - i -1];
+        }
+
+        initArray = temp;
+    }
+
+    public void insertAt(int item, int location)
+    {
+        if(location >= initArray.length)
+            return;
+
+        for(int i = 0; i < initArray.length; i++)
+        {
+            if(i == location)
+                initArray[i] = item;
+        }
+    }
 }
