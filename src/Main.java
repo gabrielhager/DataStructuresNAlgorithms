@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
+        /* Arrays
         Myrray numbers = new Myrray(3);
         numbers.insert(10);
         numbers.insert(20);
         numbers.insert(30);
         numbers.insert(40);
         //numbers.removeAt(3);
-
         numbers.print();
 
         System.out.println(numbers.indexOf(90));
@@ -21,6 +21,12 @@ public class Main {
 
         numbers.insertAt(90, 1);
         numbers.print();
+
+         */
+
+        //LinkedList
+        LinkedList list = new LinkedList();
+        System.out.println(list);
 
     }
 }
