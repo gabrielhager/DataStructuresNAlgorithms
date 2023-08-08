@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         /* Arrays
@@ -26,7 +28,15 @@ public class Main {
 
         //LinkedList
         LinkedList list = new LinkedList();
-        System.out.println(list);
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        //list.removeLast();
+
+        System.out.println(list.indexOf(100));
+        System.out.println(list.contains(30));
+        System.out.println(list.size());
+        System.out.println(Arrays.toString(list.toArray()));
 
     }
 }
