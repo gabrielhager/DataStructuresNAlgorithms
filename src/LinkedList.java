@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class LinkedList {
@@ -114,6 +115,63 @@ public class LinkedList {
         return array;
     }
 
+    public void reverse() {
+        //Could probably do with just a variety of getPrevious and setting things
+        //Probably easier to just create an array, then put in the last items, then reset the linked list with the reversed array
+
+        //int[] array = toArray();
+        //var current = first;
+        /*
+        for(int i = 0; i < size; i++){
+            array[size - 1 - i] = current.value;
+            current = current.next;
+        }
+
+        current = first;
+        for(int i = 0; i < size; i++){
+            current.value = array[i];
+            current = current.next;
+        }
+         */
+        //Inline
+        if(isEmpty()) return;
+        var previous = first;
+        var current = first.next;
+        while (current != null){
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        last = first;
+        last.next = null;
+        first = previous;
+    }
+
+    public int getKthFromTheEnd(int k){
+        if(isEmpty()) return -1;
+        if(k > size) throw new IllegalArgumentException();
+        if(k == 0) return last.value;
+        if(k < 0) throw new NoSuchElementException();
+
+        var leader = first.next;
+        var follower = first;
+
+        int distance = k-1;
+        int traveled = 0;
+
+        while(leader != null){
+            if(traveled != distance){
+                leader = leader.next;
+                traveled++;
+            }
+            else{
+                leader = leader.next;
+                follower = follower.next;
+            }
+        }
+        return follower.value;
+    }
     private Node getPrevious (Node node){
         var current = first;
         while(current != null){

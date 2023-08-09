@@ -31,12 +31,13 @@ public class Main {
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
-        //list.removeLast();
+        list.addLast(40);
+        list.addLast(50);
 
-        System.out.println(list.indexOf(100));
-        System.out.println(list.contains(30));
-        System.out.println(list.size());
+        //list.removeLast();
+        //list.reverse();
         System.out.println(Arrays.toString(list.toArray()));
+        System.out.println("The Kth from the end is: " + list.getKthFromTheEnd(8));
 
     }
 }
