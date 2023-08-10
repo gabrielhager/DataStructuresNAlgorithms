@@ -1,4 +1,5 @@
 import java.util.Arrays;
+//import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,6 +28,7 @@ public class Main {
          */
 
         //LinkedList
+        /*
         LinkedList list = new LinkedList();
         list.addLast(10);
         list.addLast(20);
@@ -38,6 +40,24 @@ public class Main {
         //list.reverse();
         System.out.println(Arrays.toString(list.toArray()));
         System.out.println("The Kth from the end is: " + list.getKthFromTheEnd(8));
+
+         */
+
+        //Stack
+        //StackPractice sp = new StackPractice();
+        //System.out.println(sp.isBalanced("(([<Hi>]))"));
+
+        Stack arrayStack = new Stack(5);
+
+        for (int i = 0; i < 5; i++){
+            arrayStack.push(i + 1);
+            System.out.println(arrayStack.peek());
+        }
+
+        for (int i = 0; i < 5; i++){
+            arrayStack.pop();
+            System.out.println(arrayStack.peek());
+        }
 
     }
 }
