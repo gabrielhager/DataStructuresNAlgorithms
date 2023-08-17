@@ -130,6 +130,7 @@ public class Main {
          */
 
         //PriorityQueue
+        /*
         PriorityQueue pq = new PriorityQueue(6);
         pq.insert(7);
         System.out.println(pq.toString());
@@ -140,6 +141,12 @@ public class Main {
         pq.insert(-1);
         pq.insert(8);
         System.out.println(pq.toString());
+
+         */
+
+        RepeatingCharacters check = new RepeatingCharacters("a green apple");
+        System.out.println(check.firstNonRepeatingChar());
+        System.out.println(check.getFirstRepeated());
 
 
     }
